@@ -31,6 +31,7 @@
     <Compile Include="System\Diagnostics\PerformanceCounterLib.cs" />
     <Compile Include="System\Diagnostics\PerformanceCounterManager.cs" />
     <Compile Include="System\Diagnostics\PerformanceCounterType.cs" />
+    <Compile Include="System\Diagnostics\PerformanceDataRegistryKey.cs" />
     <Compile Include="System\Diagnostics\SharedPerformanceCounter.cs" />
     <Compile Include="System\Diagnostics\SharedUtils.cs" />
     <Compile Include="System\Diagnostics\SystemDiagnosticsSection.cs" />
@@ -47,6 +48,18 @@
     </Compile>
     <Compile Include="$(CommonPath)\Interop\Windows\advapi32\Interop.ConvertStringSecurityDescriptorToSecurityDescriptor.cs">
       <Link>Common\Interop\Windows\advapi32\Interop.ConvertStringSecurityDescriptorToSecurityDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonPath)\CoreLib\Interop\Windows\Kernel32\Interop.FormatMessage.cs">
+      <Link>Common\Corelib\Interop\Windows\Interop.FormatMessage.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonPath)\Interop\Windows\advapi32\Interop.RegConnectRegistry.cs">
+      <Link>Common\Interop\Windows\advapi32\Interop.RegConnectRegistry.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonPath)\CoreLib\Interop\Windows\advapi32\Interop.RegCloseKey.cs">
+      <Link>Common\CoreLib\Interop\Windows\Interop.RegCloseKey.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonPath)\Interop\Windows\advapi32\Interop.RegQueryValueEx.cs">
+      <Link>Common\Interop\Windows\advapi32\Interop.RegQueryValueEx.cs</Link>
     </Compile>
     <Compile Include="$(CommonPath)\Interop\Windows\advapi32\Interop.GetTokenInformation.cs">
       <Link>Common\Interop\Windows\advapi32\Interop.GetTokenInformation.cs</Link>
@@ -146,6 +159,7 @@
   <ItemGroup Condition="'$(TargetsNetFx)' != 'true'">
     <Reference Include="Microsoft.Win32.Registry" />
     <Reference Include="Microsoft.Win32.Primitives" />
+    <Reference Include="System.Buffers" />
     <Reference Include="System.Collections" />
     <Reference Include="System.Collections.NonGeneric" />
     <Reference Include="System.ComponentModel.Primitives" />

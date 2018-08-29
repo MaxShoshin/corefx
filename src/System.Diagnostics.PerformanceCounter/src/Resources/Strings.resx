@@ -291,4 +291,16 @@
   <data name="PlatformNotSupported_PerfCounters" xml:space="preserve">
     <value>Performance Counters are not supported on this platform.</value>
   </data>
+  <data name="Arg_DllInitFailure" xml:space="preserve">
+    <value>One machine may not have remote administration enabled, or both machines may not be running the remote registry service.</value>
+  </data>
+  <data name="Arg_RegKeyNoRemoteConnect" xml:space="preserve">
+    <value>No remote connection to '{0}' while trying to read the registry.</value>
+  </data>
+  <data name="ObjectDisposed_CategorySampleClosed" xml:space="preserve">
+    <value>Cannot access a closed category sample.</value>
+  </data>
+  <data name="UnauthorizedAccess_RegistryKeyGeneric_Key" xml:space="preserve">
+    <value>Access to the registry key '{0}' is denied.</value>
+  </data>
 </root>

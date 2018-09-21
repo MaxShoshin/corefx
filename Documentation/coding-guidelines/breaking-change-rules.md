@@ -163,6 +163,10 @@ Breaking Change Rules
 
 * Changing a `struct` type to a `ref struct` type and vice versa
 
+* Changing the underlying type of an enum
+
+    This is a compile-time and behavioral breaking change as well as a binary breaking change which can make attribute arguments unparsable.
+
 ### Members
 &#10003; **Allowed**
 * Adding an abstract member to a public type when there are _no accessible_ (`public` or `protected`) constructors, or the type is `sealed`
@@ -210,6 +214,10 @@ successfully bind to that overload, if simply passing an `int` value. However, i
 * Change from `ref readonly` return to `ref` return on a virtual method or interface
 
 * Adding or removing `static` keyword from a member
+
+* Adding a field to a struct that previously had no state
+
+    Definite assignment rules allow use of uninitialized variables so long as the variable type is a stateless struct. If the struct is made stateful, code could now end up with uninitialized data. This is both potentially a source breaking and binary breaking change.
 
 ### Signatures
 &#10003; **Allowed**
